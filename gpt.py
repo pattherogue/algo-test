@@ -10,7 +10,7 @@ def run_macro():
 def interact_with_gpt(input_text):
     # Use OpenAI's API to interact with ChatGPT
     # Replace 'YOUR_API_KEY' with your actual API key
-    openai.api_key = 'YOUR_API_KEY'
+    openai.api_key = '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'
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=input_text,
