@@ -1,7 +1,7 @@
 import subprocess
 from openai import OpenAI
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='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')
 
 # Function to run the macro.py file and capture its output
 def run_macro():
