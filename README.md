@@ -49,7 +49,5 @@ Before running the script, ensure that you have Python installed on your system.
 
 ## Acknowledgements
 
-## Acknowledgements
-
 The "macro.py" script was created by **[John Costa Azevedo]((https://www.linkedin.com/in/john-azevedo-iii/))**, who also served as the lead innovator for this project. We thank John for their significant contribution and leadership.
 
