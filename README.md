@@ -33,9 +33,9 @@ Before running the script, ensure that you have Python installed on your system.
   ```
 
 5. Install the required dependencies:
-   ``
+   ```
    pip install -r requirements.txt
-   ``
+   ```
 ## Running the Script
 
    Once you have installed the dependencies, you can run the "macro.py" script.
