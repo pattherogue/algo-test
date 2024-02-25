@@ -38,7 +38,7 @@ Before running the script, ensure that you have Python installed on your system.
    ``
 ## Running the Script
 
-Once you have installed the dependencies, you can run the "macro.py" script.
+   Once you have installed the dependencies, you can run the "macro.py" script.
    ```
    python3 macro.py
    ```
@@ -49,4 +49,4 @@ Once you have installed the dependencies, you can run the "macro.py" script.
 
 ## Acknowledgements
 
-The "macro.py" script was created by John Costa Azevedo. We thank John for their contribution to this project.
+The "macro.py" script was created by **John Costa Azevedo**, who also served as the lead innovator for this project. We thank John for their significant contribution and leadership.
