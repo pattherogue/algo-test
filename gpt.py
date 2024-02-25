@@ -1,7 +1,7 @@
 import subprocess
 from openai import OpenAI
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='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')
 
 # Function to run the macro.py file and capture its output
 def run_macro():
@@ -12,7 +12,8 @@ def run_macro():
 def interact_with_gpt(input_text):
     # Use OpenAI's API to interact with ChatGPT
     # Replace 'YOUR_API_KEY' with your actual API key
-    response = client.completions.create(engine="text-davinci-002",
+    response = client.completions.create(
+    model="text-davinci-002",
     prompt=input_text,
     max_tokens=150  # Adjust max tokens as needed)
     )
