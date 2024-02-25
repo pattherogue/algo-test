@@ -9,17 +9,17 @@ Before running the script, ensure that you have Python installed on your system.
 ## Installation
 
 1. Clone the repository to your local machine:
-   
-git clone https://github.com/pattherogue/algo-test.git
-
+   ```  
+   git clone https://github.com/pattherogue/algo-test.git
+   ```
 3. Navigate to the project directory:
-   
-cd algo-test
-
+   ```
+   cd algo-test
+   ```
 5. Create a virtual environment (optional but recommended):
-   
-python3 -m venv env
-
+   ```
+   python3 -m venv env
+   ```
 7. Activate the virtual environment:
    
 - On Unix/Linux/Mac:
@@ -33,15 +33,15 @@ python3 -m venv env
   ```
 
 5. Install the required dependencies:
-   
-pip install -r requirements.txt
-
+   ``
+   pip install -r requirements.txt
+   ``
 ## Running the Script
 
 Once you have installed the dependencies, you can run the "macro.py" script.
-
-python3 macro.py
-
+   ```
+   python3 macro.py
+   ```
 ## Additional Notes
 
 - Make sure to replace `macro.py` with the actual name of your Python script if it's different.
