@@ -1,38 +1,31 @@
 import subprocess
-import pyautogui
-import time
+import openai
 
-# Step 1: Determine the path to your_script.py within the algo-test directory
-script_path = "macro.py"  # Assuming your_script.py is located within the algo-test directory
+# Function to run the macro.py file and capture its output
+def run_macro():
+    result = subprocess.run(['python', 'macro.py'], capture_output=True, text=True)
+    return result.stdout
 
-# Step 2: Run your Python script and capture its output
-result = subprocess.run(["python", script_path], capture_output=True, text=True)
-output = result.stdout
+# Function to interact with ChatGPT
+def interact_with_gpt(input_text):
+    # Use OpenAI's API to interact with ChatGPT
+    # Replace 'YOUR_API_KEY' with your actual API key
+    openai.api_key = 'YOUR_API_KEY'
+    response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=input_text,
+        max_tokens=150  # Adjust max tokens as needed
+    )
+    return response.choices[0].text.strip()
 
-# Step 3: Simulate typing the output into ChatGPT
-pyautogui.write(output)
+# Run the macro.py file and capture its output
+macro_output = run_macro()
 
-# Step 4: Simulate pressing Enter
-pyautogui.press('enter')
+# Combine the macro output with the question for ChatGPT
+input_to_gpt = f"{macro_output}\n\nwhat can you tell about the state of the markets solely based on this data. the sector rotation. or if you were a trader. make sure you look at everything in relation to each other. you don't need to explain your analysis step by step in detail only the outcome of your analysis. just really brief. make sure you look at every detail. we want to look at correlations between indicators, etc. and then we want to estimate what phase of the business cycle. and its only after we've done all of this do we want to look for the sector rotation and forward guidance. we want to account for all of the nuance being displayed here and get the most robust assessment of market health possible:"
 
-# Step 5: Add a small delay before typing the analysis prompt
-time.sleep(1)
+# Interact with ChatGPT using the combined input
+response = interact_with_gpt(input_to_gpt)
 
-# Analysis prompt
-prompt = """
-"what can you tell about the state of the markets solely based on this data. 
-the sector rotation. or if you were a trader. make sure you look at everything 
-in relation to each other. you don't need to explain your analysis step by step 
-in detail only the outcome of your analysis. just really brief. make sure you look 
-at every detail. we want to look at correlations between indicators, etc. and then 
-we want to estimate what phase of the business cycle. and its only after we've done 
-all of this do we want to look for the sector rotation and forward guidance. we want 
-to account for all of the nuance being displayed here and get the most robust 
-assessment of market health possible:"
-"""
-
-# Step 6: Simulate typing the analysis prompt
-pyautogui.write(prompt)
-
-# Step 7: Simulate pressing Enter again to submit the prompt
-pyautogui.press('enter')
+# Print the response from ChatGPT
+print("Response from ChatGPT:", response)
