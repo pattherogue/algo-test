@@ -7,11 +7,6 @@ from scipy.stats import percentileofscore
 from scipy.stats import norm
 from math import erf, sqrt
 
-
-
-
-
-
 # Initialize FRED API with your API key
 fred = Fred(api_key='eb36db0397ab6c514f1670c79fe0d3a2')
 
