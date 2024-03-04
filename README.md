@@ -1,4 +1,4 @@
-# Project Algo (A NOVM-based project)
+# Project Algo (NOVM)
 
 This project contains a Python script named "macro.py" that performs certain tasks. Follow the instructions below to run the script.
 
